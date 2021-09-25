@@ -1,0 +1,23 @@
+{
+  "name": "rephp/cmd-output",
+  "description": "可以比较优雅地在命令行模式下输出内容到console中",
+  "keywords": ["php command output", "php console output", "output"],
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "sam.shi",
+      "email": "8464005@qq.com"
+    }
+  ],
+  "require": {
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "rephp\\output\\": "./src/"
+    }
+  }
+}
