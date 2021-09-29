@@ -74,7 +74,7 @@ class orm
      */
     protected function appendItem($format, $msg, $isEndItem = false, $isEndRow = false)
     {
-        $this->item .= sprintf($this->infoFormat, $msg);
+        $this->item .= sprintf($format, $msg);
         return $this->endItem($isEndItem)->endRow($isEndRow);
     }
 

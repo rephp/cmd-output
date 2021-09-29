@@ -4,7 +4,6 @@
   "keywords": ["php command output", "php console output", "output"],
   "license": "MIT",
   "minimum-stability": "stable",
-  "license": "proprietary",
   "authors": [
     {
       "name": "sam.shi",
