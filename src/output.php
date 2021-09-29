@@ -172,6 +172,16 @@ class output
     }
 
     /**
+     * 直接push整个二维数组list到内容中
+     * @param  array $list  内容，二维数组
+     * @return mixed
+     */
+    public function setList($list)
+    {
+        return $this->getOrm()->setList($list);
+    }
+
+    /**
      * 获取格式化后的数据内容
      * @return string
      */

@@ -5,7 +5,7 @@ use rephp\output\output;
 
 class demo{
 
-    function test()
+    public function test()
     {
         return output::find()
               ->title('这是一个测试', 1, 1)
@@ -15,8 +15,19 @@ class demo{
               ->error('error类型语句', 1, 0)->info('info类型语句', 1)
               ->get();
     }
+
+    public function setList()
+    {
+        $list = [
+            ['kexxxy', 'vaxxxludddddddde','texxxst'],
+            ['key', 'value'],
+            ['key', 'value','test'],
+        ];
+        return output::find()->setList($list)->get();
+    }
 }
 
 require 'vendor/autoload.php';
 $teser = new demo();
 echo $teser->test();
+echo $teser->setList();

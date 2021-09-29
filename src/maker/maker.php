@@ -68,7 +68,7 @@ class maker
         $result = '';
         foreach ($content as $row) {
             foreach ($row as $index => $item) {
-                $result .= $item . self::getRepeat($item, $index) . '    ';
+                $result .= $item . self::getRepeat($item, $index) . '  ';
             }
             $result .= PHP_EOL;
         }

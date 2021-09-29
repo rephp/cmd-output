@@ -65,6 +65,27 @@ class orm
     protected $item = '';
 
     /**
+     * 直接push整个二维数组list到内容中
+     * @param array $list 内容，二维数组
+     * @return mixed
+     */
+    public function setList(array $list)
+    {
+        $this->item    = '';
+        $this->row     = [];
+        $this->content  = [];
+        //第一列全部特殊处理
+        $row = (array)array_shift($list);
+        foreach($row as $msg){
+            $this->warning($msg, true);
+        }
+        $this->endRow(true);
+        $this->content = array_merge($this->content, $list);
+
+        return $this;
+    }
+
+    /**
      * 追加item元素内容
      * @param string  $format    格式字符串
      * @param string  $msg       消息内容
@@ -200,7 +221,7 @@ class orm
     public function get()
     {
         //元素和tr清理后入content
-        if(!empty($this->item) || !empty($this->row)){
+        if (!empty($this->item) || !empty($this->row)) {
             $this->endRow(true);
         }
         return maker::get($this->content);
